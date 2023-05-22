@@ -1,3 +1,6 @@
+<?php
+    include "config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.php"/>
-    <title>EAR-3</title>
+    <title>EAR-3 Market</title>
 </head>
-<body>
+<body class="body">
     <nav class="nav-bar">  
         <ul class="nav-ul">
             <a class="nav-a" href="#">Home</a>
@@ -16,8 +19,10 @@
             <a class="nav-a" href="#">More</a>
         </ul>
     </nav>
+    <footer>
+        <p align="center">
+        <a class="nav-a">English</a> | <a class="nav-a">Romanian</a>
+        </p>
+    </footer>
 </body>
 </html>
-<?php
-
-?>
