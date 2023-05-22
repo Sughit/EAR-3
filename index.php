@@ -2,7 +2,7 @@
     include "config.php";
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <link rel="icon" href="poze/logo_ureche_numai_cerc.png">
     <meta charset="UTF-8">
@@ -52,8 +52,18 @@
 
 
     <footer>
+            <a class="nav-a" href="store.php"><?php echo $lang['store'] ?></a>
+            <a class="nav-a" href="community.php"><?php echo $lang['community'] ?></a>
+            <a class="nav-a" href="about.php"><?php echo $lang['about'] ?></a>
+            <a class="nav-a" href="support.php"><?php echo $lang['support'] ?></a>
+        </ul>
+    </nav>
+    <p class="text">
+        Text
+    </p>
+    <footer class="footer">
         <p align="center">
-        <a class="nav-a">English</a> | <a class="nav-a">Romanian</a>
+        <a class="nav-a" href="index.php?lang=en"><?php echo $lang['en'] ?></a> <font color="white">|</font> <a class="nav-a" href="index.php?lang=ro"><?php echo $lang['ro'] ?></a>
         </p>
     </footer>
 </body>
