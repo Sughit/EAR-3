@@ -1,9 +1,10 @@
 <?php
     $lang = array(
-        "home" => "Acasă",
-        "next" => "Următoarea",
-        "more" => "Mai mult",
-        "en" => "Engleză",
-        "ro" => "Română"
+        "store" => "Magazin",
+        "community" => "Comunitate",
+        "about" => "Despre",
+        "suport" => "Suport",
+        "en" => "English",
+        "ro" => "Romanian"
     );
 ?>

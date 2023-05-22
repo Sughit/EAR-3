@@ -14,14 +14,18 @@
 <body class="body">
     <nav class="nav-bar">  
         <ul class="nav-ul">
-            <a class="nav-a" href="#"><?php echo $lang['home'] ?></a>
-            <a class="nav-a" href="#"><?php echo $lang['next'] ?></a>
-            <a class="nav-a" href="#"><?php echo $lang['more'] ?></a>
+            <a class="nav-a" href="#"><?php echo $lang['store'] ?></a>
+            <a class="nav-a" href="#"><?php echo $lang['community'] ?></a>
+            <a class="nav-a" href="#"><?php echo $lang['about'] ?></a>
+            <a class="nav-a" href="#"><?php echo $lang['suport'] ?></a>
         </ul>
     </nav>
-    <footer>
+    <p class="text">
+        Text
+    </p>
+    <footer class="footer">
         <p align="center">
-        <a class="nav-a" href="index.php?lang=en"><?php echo $lang['en'] ?></a> | <a class="nav-a" href="index.php?lang=ro"><?php echo $lang['ro'] ?></a>
+        <a class="nav-a" href="index.php?lang=en"><?php echo $lang['en'] ?></a> <font color="white">|</font> <a class="nav-a" href="index.php?lang=ro"><?php echo $lang['ro'] ?></a>
         </p>
     </footer>
 </body>

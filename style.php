@@ -13,7 +13,8 @@
 .nav-bar
 {
     background-color: black;
-    
+    width: 100%;
+    padding: 1%;
 }
 .nav-ul
 {
@@ -31,4 +32,16 @@
     text-transform: uppercase;
     transform: translate(0%, 0%);
     background: black;
+}
+.footer
+{
+    height: .5%;
+    width: 100%;
+    background-color: black;
+}
+.text
+{
+    padding: 3%;
+    color: white;
+    font-size: 2vh;
 }

@@ -1,8 +1,9 @@
 <?php
     $lang = array(
-        "home" => "Home",
-        "next" => "Next",
-        "more" => "More",
+        "store" => "Store",
+        "community" => "Community",
+        "about" => "About",
+        "suport" => "Suport",
         "en" => "English",
         "ro" => "Romanian"
     );
