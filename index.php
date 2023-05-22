@@ -14,7 +14,6 @@
 <body class="body">
     <nav class="nav-bar">  
         <ul class="nav-ul">
-            <br><br>
         </ul>
     </nav>
     
@@ -30,9 +29,10 @@
         </div>
 
         <ul class ="nav-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a class="nav-a" href="store.php"><?php echo $lang['store'] ?></a></li>
+            <li><a class="nav-a" href="community.php"><?php echo $lang['community'] ?></a></li>
+            <li><a class="nav-a" href="about.php"><?php echo $lang['about'] ?></a></a></li>
+            <li><a class="nav-a" href="support.php"><?php echo $lang['support'] ?></a></li>
         </ul>
 </div>
     <script>
@@ -52,12 +52,6 @@
 
 
     <footer>
-            <a class="nav-a" href="store.php"><?php echo $lang['store'] ?></a>
-            <a class="nav-a" href="community.php"><?php echo $lang['community'] ?></a>
-            <a class="nav-a" href="about.php"><?php echo $lang['about'] ?></a>
-            <a class="nav-a" href="support.php"><?php echo $lang['support'] ?></a>
-        </ul>
-    </nav>
     <p class="text">
         Text
     </p>

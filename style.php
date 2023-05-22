@@ -27,7 +27,6 @@
     margin: 5 5px;
     display: inline-block;
     font-size: 120%;
-    padding: 0.5% 0.9%;
     border-radius: 3px;
     text-transform: uppercase;
     transform: translate(20%, 0%);
@@ -47,7 +46,7 @@
    font-size: 30px;
    background-color: #000;
    color: white;
-   padding: 4px 10px;;
+   padding: 4px 10px;
    border-radius: 5px;
    cursor: pointer;
 }
@@ -111,6 +110,7 @@
     display: block;
     background-color: #b8b8ba;
     transition: all 0.1s;
+    transform:translate(0%, 0%);
 }
 .sidenav .nav-list a:hover
 {
