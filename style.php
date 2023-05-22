@@ -33,6 +33,18 @@
     transform: translate(0%, 0%);
     background: black;
 }
+.nav-b
+{
+    color: white;
+    font-weight: bold;
+    margin: 5 5px;
+    display: inline-block;
+    font-size: 120%;
+    padding: 0.5% 0.9%;
+    border-radius: 3px;
+    text-transform: uppercase;
+    transform: translate(0%, 0%);
+}
 .footer
 {
     height: .5%;
@@ -44,4 +56,10 @@
     padding: 3%;
     color: white;
     font-size: 2vh;
+}
+.div-store
+{
+    background-color: #535366;
+    margin: 3%;
+    padding: 2%;
 }

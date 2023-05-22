@@ -1,10 +1,14 @@
 <?php
     $lang = array(
+        "home" => "Home",
         "store" => "Store",
         "community" => "Community",
         "about" => "About",
-        "suport" => "Suport",
+        "support" => "Support",
         "en" => "English",
-        "ro" => "Romanian"
+        "ro" => "Romanian",
+        "your-store" => "Your store",
+        "categories" => "Categories",
+        "news" => "News"
     );
 ?>

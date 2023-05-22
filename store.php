@@ -14,19 +14,23 @@
 <body class="body">
     <nav class="nav-bar">  
         <ul class="nav-ul">
-            <a class="nav-a" href="store.php"><?php echo $lang['store'] ?></a>
+            <a class="nav-a" href="index.php"><?php echo $lang['home'] ?></a>
             <a class="nav-a" href="community.php"><?php echo $lang['community'] ?></a>
             <a class="nav-a" href="about.php"><?php echo $lang['about'] ?></a>
             <a class="nav-a" href="support.php"><?php echo $lang['support'] ?></a>
         </ul>
     </nav>
+    <div class="div-store">
+        <nav>
+            <ul>
+                <a class="nav-b" href="#"><?php echo $lang['your-store'] ?></a>
+                <a class="nav-b" href="#"><?php echo $lang['categories'] ?></a>
+                <a class="nav-b" href="#"><?php echo $lang['news'] ?></a>
+            </ul>
+        </nav>
+    </div>
     <p class="text">
-        Text
+        Magazin
     </p>
-    <footer class="footer">
-        <p align="center">
-        <a class="nav-a" href="index.php?lang=en"><?php echo $lang['en'] ?></a> <font color="white">|</font> <a class="nav-a" href="index.php?lang=ro"><?php echo $lang['ro'] ?></a>
-        </p>
-    </footer>
 </body>
 </html>

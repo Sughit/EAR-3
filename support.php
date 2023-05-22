@@ -21,12 +21,7 @@
         </ul>
     </nav>
     <p class="text">
-        Text
+        Ajutor
     </p>
-    <footer class="footer">
-        <p align="center">
-        <a class="nav-a" href="index.php?lang=en"><?php echo $lang['en'] ?></a> <font color="white">|</font> <a class="nav-a" href="index.php?lang=ro"><?php echo $lang['ro'] ?></a>
-        </p>
-    </footer>
 </body>
 </html>

@@ -1,10 +1,14 @@
 <?php
     $lang = array(
+        "home" => "Acasă",
         "store" => "Magazin",
         "community" => "Comunitate",
         "about" => "Despre",
-        "suport" => "Suport",
+        "support" => "Asistență",
         "en" => "English",
-        "ro" => "Romanian"
+        "ro" => "Romanian",
+        "your-store" => "Magazinul tău",
+        "categories" => "Categorii",
+        "news" => "Stiri"
     );
 ?>
