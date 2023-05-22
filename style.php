@@ -4,6 +4,11 @@
 .body
 {
     background-color: #31313D;
+    scrollbar-width: none;
+}
+::-webkit-scrollbar /*scrollbar pentru chrome*/
+{
+    width: 0;
 }
 .nav-bar
 {
