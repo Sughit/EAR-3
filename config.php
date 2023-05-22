@@ -10,4 +10,6 @@
         else if($_GET['lang'] == "en")
             $_SESSION['lang'] = "en";
     }
+
+    require_once "limbi/" . "lang-" . $_SESSION['lang'] . ".php";
 ?>

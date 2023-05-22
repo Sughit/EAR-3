@@ -14,14 +14,14 @@
 <body class="body">
     <nav class="nav-bar">  
         <ul class="nav-ul">
-            <a class="nav-a" href="#">Home</a>
-            <a class="nav-a" href="#">Next</a>
-            <a class="nav-a" href="#">More</a>
+            <a class="nav-a" href="#"><?php echo $lang['home'] ?></a>
+            <a class="nav-a" href="#"><?php echo $lang['next'] ?></a>
+            <a class="nav-a" href="#"><?php echo $lang['more'] ?></a>
         </ul>
     </nav>
     <footer>
         <p align="center">
-        <a class="nav-a">English</a> | <a class="nav-a">Romanian</a>
+        <a class="nav-a" href="index.php?lang=en"><?php echo $lang['en'] ?></a> | <a class="nav-a" href="index.php?lang=ro"><?php echo $lang['ro'] ?></a>
         </p>
     </footer>
 </body>
