@@ -47,13 +47,9 @@
         closeNav.addEventListener("click", ()=>{
             navSlide.classList.remove("navside");
         });
-
     </script>
-
-
     <footer>
     <p class="text">
-        Text
     </p>
     <footer class="footer">
         <p align="center">

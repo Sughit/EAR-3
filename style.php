@@ -5,6 +5,7 @@
 {
     background-color: #31313D;
     scrollbar-width: none;
+
 }
 ::-webkit-scrollbar
 {
@@ -13,7 +14,7 @@
 .nav-bar
 {
     background-color: black;
-    width: 100%;
+    width: 98.4%;
     padding: 1%;
 }
 .nav-ul
