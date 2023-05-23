@@ -1,21 +1,30 @@
 <?php
     header("Content-type: text/css; charset: UTF-8");
 ?>
+*
+{
+    scrollbar-width: none;
+}
 .body
 {
     background-color: #31313D;
-    scrollbar-width: none;
+    overflow-x: hidden;
 
 }
 ::-webkit-scrollbar
 {
     width: 0;
 }
+
 .nav-bar
 {
     background-color: black;
-    width: 98.4%;
+    width: 100%;
     padding: 1%;
+    position:fixed;
+    top:0%;
+    left:0%;
+    opacity:0.6;
 }
 .nav-ul
 {
@@ -36,7 +45,7 @@
 #main
 {
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 1%;
     left: 5%;
     scale: 60%;
@@ -44,10 +53,9 @@
 
 #main span
 {
-   font-size: 30px;
-   background-color: #000;
+   font-size: 30px; 
    color: white;
-   padding: 4px 10px;
+   padding: 0px 0px;
    border-radius: 5px;
    cursor: pointer;
 }
@@ -64,6 +72,7 @@
    padding-top: 30px;
    opacity: 0;
    visibility: hidden;
+   position: fixed;
 }
 .sidenav .box-c1
 {
@@ -122,7 +131,7 @@
 {
     width: 300px;
     visibility: visible;
-    opacity:1;
+    opacity:0.95;
 }
 .nav-b
 {
@@ -153,4 +162,82 @@
     background-color: #535366;
     margin: 3%;
     padding: 2%;
+    top: 10%;
+    left: 18.5%;
+    position:absolute;
+}
+.div-poza
+{
+    top: 35%;
+    right: 35%;
+    scale: 200%;
+    position:absolute;
+    z-index: -1;
+}
+.div-textComunitate
+{
+    top: 20%;
+    left: 20%;
+    height:50%;
+    position:absolute;
+    z-index: -1;
+}
+.div-textMagazin
+{
+    top: 30%;
+    left: 20%;
+    height:50%;
+    position:absolute;
+    z-index: -1;
+}
+.div-textAcasa
+{
+    top: 100%;
+    right:42.8%;
+    position:absolute;
+    z-index: -1;
+}
+.div-textDespre
+{
+    top: 20%;
+    left: 20%;
+    height:50%;
+    position:absolute;
+    z-index: -1;
+}
+.div-textAjutor
+{
+    top: 20%;
+    left: 20%;
+    height:50%;
+    position:absolute;
+    z-index: -1;    
+}
+.nav-steag1
+{
+    position:fixed;
+    z-index: 1;
+    right: 10%;
+    top:1%;
+    border-style:solid;
+    border-width: 1px;
+    border-color: white;
+}
+.nav-steag2
+{
+    position:fixed;
+    z-index: 1;
+    right: 6%;
+    top:1%;
+    border-style:solid;
+    border-width: 1px;;
+    border-color: white;
+}
+.div-cercMeniu
+{
+    transform: translate(20%, 0%);
+}
+.div-copy
+{
+    transform: translate(0%, 950%);
 }

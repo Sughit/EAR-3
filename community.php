@@ -14,14 +14,51 @@
 <body class="body">
     <nav class="nav-bar">  
         <ul class="nav-ul">
-            <a class="nav-a" href="store.php"><?php echo $lang['store'] ?></a>
-            <a class="nav-a" href="community.php"><?php echo $lang['community'] ?></a>
-            <a class="nav-a" href="about.php"><?php echo $lang['about'] ?></a>
-            <a class="nav-a" href="support.php"><?php echo $lang['support'] ?></a>
+            
         </ul>
     </nav>
+    <div id="main">
+        <span id="open">&#9776; Menu<span>
+    </div>
+    <div id ="mySidenav" class="sidenav">
+        <div class="box-c1">
+            <a href="#" class="logo"><div class="div-cercMeniu"><img src="poze/logo_ureche_numai_cerc.png" width=55%></a></div>
+            <a href="#" class="closebtn" id="close"> &times;</a>          
+        </div>
+
+        <ul class ="nav-list">
+            <li><a class="nav-a" href="index.php"><?php echo $lang['home'] ?></a></li>
+            <li><a class="nav-a" href="store.php"><?php echo $lang['store'] ?></a></li>
+            <li><a class="nav-a" href="community.php"><?php echo $lang['community'] ?></a></li>
+            <li><a class="nav-a" href="about.php"><?php echo $lang['about'] ?></a></a></li>
+            <li><a class="nav-a" href="support.php"><?php echo $lang['support'] ?></a></li>
+        </ul>
+        <div class="div-copy">
+            <p class="text">
+             ©EAR-3 2023-2023
+            </p>
+         </div>
+</div>
+    <script>
+        const openNav =document.getElementById("open");
+        const closeNav =document.getElementById("close");
+        const navSlide =document.getElementById("mySidenav");
+
+        openNav.addEventListener("click", ()=>{
+            navSlide.classList.add("navside");
+        });
+
+        closeNav.addEventListener("click", ()=>{
+            navSlide.classList.remove("navside");
+        });
+    </script>
+    <div class="div-textComunitate">
     <p class="text">
-        Comunitate
+    <?php echo $lang['textCommunity'] ?>
     </p>
+    </div>
+    <pre>
+        <a class="nav-steag1" href="community.php?lang=en"><img src="poze/en.png" width=50px ></a>            <a class="nav-steag2" href="community.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    
+    </pre>
 </body>
 </html>
