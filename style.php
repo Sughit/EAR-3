@@ -253,6 +253,20 @@
 }
 .div-copy
 {
-    transform: translate(0%, 950%);
+    transform: translate(0%, 420%);
+}
+.div-textMeniu
+{
+    background-color: #000;
+    color: #c2c2c2;
+    margin: 10px;
+}
+.div-textProject1
+{
+    top: 20%;
+    left: 20%;
+    height:50%;
+    position:absolute;
+    z-index: -1;  
 }
 

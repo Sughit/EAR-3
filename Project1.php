@@ -18,7 +18,7 @@
         </ul>
     </nav>
     <div id="main">
-        <span id="open">&#9776; Menu<span>
+        <span id="open">&#9776; <?php echo  $lang['menu'] ?><span>
     </div>
     <div id ="mySidenav" class="sidenav">
         <div class="box-c1">
@@ -63,14 +63,14 @@
         playBtn[0].addEventListener("click", (e) => {
   audio.play();
 });
-    </script>
-    <div class="div-textComunitate">
+    </script>   
+    <div class="div-textProject1">
     <p class="text">
-    <?php echo $lang['textCommunity'] ?>
+    <?php echo $lang['textProject1'] ?>
     </p>
-    </div>
-    <pre>
-        <a class="nav-steag1" href="community.php?lang=en"><img src="poze/en.png" width=50px ></a>            <a class="nav-steag2" href="community.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    
-    </pre>
+</div>
+<pre>
+        <a class="nav-steag1" href="Project1.php?lang=en"><img src="poze/en.png" width=50px ></a>            <a class="nav-steag2" href="Project1.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    
+    </pre>  
 </body>
 </html>
