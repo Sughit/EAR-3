@@ -20,7 +20,7 @@
 
 
     <div id="main">
-        <span id="open">&#9776; <?php echo  $lang['menu'] ?><span>
+        <span id="open" class="nav-button">&#9776; <?php echo  $lang['menu'] ?></span>
     </div>
     <div id ="mySidenav" class="sidenav">
         <div class="box-c1">
@@ -42,7 +42,7 @@
          </div>
 </div>
 <div class="div-poza">
-<img src="poze/noi_3_costum.png">
+<p align="center"><img src="poze/noi_3_costum.png" width="50%" height="60%"></p>
 </div>
     <script>
         const openNav =document.getElementById("open");
@@ -58,14 +58,19 @@
         });
     </script>
         <div class="div-textAcasa">
-    <p class="text" align=center><font face="Franklin Gothic"><b>
-    <?php echo $lang['textHome'] ?></b></font>
+    <p class="text" align="center"><font face="Franklin Gothic"><b>
+        <?php echo $lang['textHome'] ?></b></font>
     </p>
     </div>
-    
-       <pre>
-        <a class="nav-steag1" href="index.php?lang=en"><img src="poze/en.png" width=50px ></a>            <a class="nav-steag2" href="index.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    
-    </pre>
+        <a class="nav-steag1" href="index.php?lang=en"><img src="poze/en.png" width = "50px"></a>
+        <a class="nav-steag2" href="index.php?lang=ro"><img src="poze/ro.png" width = "50px"></a>
 
+        <div class="footer">
+            <p class="text-footer">
+                <font face="Franklin Gothic">
+                    test
+                </font>
+            </p>
+        </div>
 </body>
 </html>

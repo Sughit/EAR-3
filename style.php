@@ -9,13 +9,15 @@
 {
     background-color: #31313D;
     overflow-x: hidden;
-
 }
 ::-webkit-scrollbar
 {
     width: 0;
 }
-
+.nav-button
+{
+    transform: translate(0, 50%);
+}
 .nav-bar
 {
     background-color: black;
@@ -25,6 +27,7 @@
     top:0%;
     left:0%;
     opacity:0.6;
+    height: 10%;
 }
 .nav-ul
 {
@@ -147,12 +150,22 @@
 }
 .footer
 {
-    height: .5%;
-    width: 100%;
+    transform: translate(0, 0);
+    height: 3%;
+    width: 99%;
     background-color: black;
+    position: absolute;
+    bottom: -90px;
+}
+.text-footer
+{
+    color: white;
+    font-size: 2vh;
+    transform: translate(0, -55%);
 }
 .text
 {
+    transform: translate(0, 0);
     padding: 3%;
     color: white;
     font-size: 2vh;
@@ -222,6 +235,7 @@
     border-style:solid;
     border-width: 1px;
     border-color: white;
+    transform: translate(-75%, 0);
 }
 .nav-steag2
 {
@@ -239,5 +253,6 @@
 }
 .div-copy
 {
-    transform: translate(0%, 950%);
+    transform: translate(0%, 550%);
 }
+
