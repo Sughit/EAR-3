@@ -51,6 +51,11 @@
         closeNav.addEventListener("click", ()=>{
             navSlide.classList.remove("navside");
         });
+        let playBtn = document.getElementsByClassName("div-cercMeniu");
+        const audio = new Audio("poze/scula_bob.mp3");
+        playBtn[0].addEventListener("click", (e) => {
+  audio.play();
+});
     </script>   
     <div class="div-textAjutor">
     <p class="text">

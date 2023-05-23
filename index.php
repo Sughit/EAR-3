@@ -56,6 +56,13 @@
         closeNav.addEventListener("click", ()=>{
             navSlide.classList.remove("navside");
         });
+
+        let playBtn = document.getElementsByClassName("div-cercMeniu");
+        const audio = new Audio("poze/scula_bob.mp3");
+        playBtn[0].addEventListener("click", (e) => {
+  audio.play();
+});
+
     </script>
         <div class="div-textAcasa">
     <p class="text" align="center"><font face="Franklin Gothic"><b>
@@ -68,7 +75,7 @@
         <div class="footer">
             <p class="text-footer">
                 <font face="Franklin Gothic">
-                    test
+                <?php echo $lang['textHome2'] ?>
                 </font>
             </p>
         </div>

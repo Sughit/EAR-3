@@ -22,7 +22,7 @@
 {
     background-color: black;
     width: 100%;
-    padding: 1%;
+    padding: 0%;
     position:fixed;
     top:0%;
     left:0%;
@@ -161,7 +161,7 @@
 {
     color: white;
     font-size: 2vh;
-    transform: translate(0, -55%);
+    transform: translate(3%, -70%);
 }
 .text
 {
@@ -183,7 +183,7 @@
 {
     top: 35%;
     right: 35%;
-    scale: 200%;
+    scale: 300%;
     position:absolute;
     z-index: -1;
 }
@@ -205,8 +205,8 @@
 }
 .div-textAcasa
 {
-    top: 100%;
-    right:42.8%;
+    top: 80%;
+    left: 42%;
     position:absolute;
     z-index: -1;
 }
@@ -230,8 +230,8 @@
 {
     position:fixed;
     z-index: 1;
-    right: 10%;
-    top:1%;
+    right: 5%;
+    top:2.5%;
     border-style:solid;
     border-width: 1px;
     border-color: white;
@@ -241,8 +241,8 @@
 {
     position:fixed;
     z-index: 1;
-    right: 6%;
-    top:1%;
+    right: 3%;
+    top:2.5%;
     border-style:solid;
     border-width: 1px;;
     border-color: white;
@@ -253,6 +253,6 @@
 }
 .div-copy
 {
-    transform: translate(0%, 550%);
+    transform: translate(0%, 950%);
 }
 
