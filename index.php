@@ -77,9 +77,9 @@
         <?php echo $lang['textHome'] ?></b></font>
     </p>
     </div>
-        <a class="nav-steag1" href="index.php?lang=en"><img src="poze/en.png" width = "50px"></a>
-        <a class="nav-steag2" href="index.php?lang=ro"><img src="poze/ro.png" width = "50px"></a>
-
+    <pre>
+        <a class="nav-steag1" href="store.php?lang=en"><img src="poze/en.png" width=50px ></a>            <a class="nav-steag2" href="store.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    
+    </pre>
         <div class="footer">
             <p class="text-footer">
                 <font face="Franklin Gothic">
