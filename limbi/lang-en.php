@@ -19,6 +19,6 @@
         "textSupport"=> "Help. No, seriously. I need help.",
         "projects"=> "PROJECTS",
         "Project1"=> "Project-1",
-        "textProject1"=> "This is the first Project"
+        "textProject1"=> "This is the first project that we take more seriously (it contains cars)"
     );
 ?>

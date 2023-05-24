@@ -19,6 +19,6 @@
         "textSupport"=> "Ajutor. Nu, serios. am nevoide de ajutor.",
         "projects"=> "PROIECTE",
         "Project1"=> "Proiect-1",
-        "textProject1"=> "Acesta este primul proiect"
+        "textProject1"=> "Acesta este primul proiect mai serios(va fi cu masini)"
     );
 ?>
