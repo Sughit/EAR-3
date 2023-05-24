@@ -18,7 +18,7 @@
         </ul>
     </nav>
     <div id="main">
-        <span id="open">&#9776; <?php echo  $lang['menu'] ?><span>
+    <span id="open" class="nav-button">&#9776; <?php echo  $lang['menu'] ?></span>
     </div>
     <div id ="mySidenav" class="sidenav">
         <div class="box-c1">
