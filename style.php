@@ -18,6 +18,7 @@
 {
     transform: translate(0, 50%);
 }
+
 .nav-bar
 {
     background-color: black;
@@ -270,3 +271,92 @@
     z-index: -1;  
 }
 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-device-width: 1366px) {
+    body, html {
+  height: 100%;
+  padding: 10px;
+  width: 98.7%;
+}
+}
+body, html {
+  height: 100%;
+  width: 98.7%;
+}
+
+
+.parallax {
+    
+    
+                                                 /* MODIFICATI  DE AICI IMAGINEA DE SUS */
+
+  background-image: url('https://builtin.com/sites/www.builtin.com/files/styles/og/public/2022-08/gaming-companies.png'); 
+
+  height: 100%; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.rounded-corners {
+  border-radius: 0 0 20px 20px;
+}
+.rounded-corners2 {
+  border-radius: 20px 20px  0 0;
+}
+.mainul {
+
+    align="center"
+      width: 50px;
+      height: 100px;
+      background-color: #282828;
+      border: 1px solid #383838; 
+      border-radius: 5px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+
+.postare {
+
+  width: 350px;
+  height: 200px;
+  background-color: #282828;
+  border: 1px solid #383838; 
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}

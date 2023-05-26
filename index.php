@@ -10,6 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.php">
     <title>EAR-3 Market</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
 </head>
 <body class="body">
     <nav class="nav-bar">  
@@ -49,8 +55,42 @@
             </p>
          </div>
 </div>
-<div class="div-poza">
-<p align="center"><img src="poze/noi_3_costum.png" width="50%" height="60%"></p>
+
+
+<div class="parallax" ></div>
+ 
+<div style="height:1000px;background-color:#202020;font-size:36px" class='rounded-corners'>
+
+
+<font color=gray>
+
+
+
+
+
+
+    <div class="mainul" align="center" >INTRODUCERE<br> <font size=5>Aici sunt postarile </font></div>
+<br><br>
+    <div class="postare">Șoc si groază<br> <font size=5>a murit Ceaușescu </font></div>
+
+
+
+
+
+
+
+
+
+
+</font>
+
+
+</div>
+
+
+
+
+
 </div>
     <script>
         const openNav =document.getElementById("open");
@@ -70,22 +110,17 @@
         playBtn[0].addEventListener("click", (e) => {
   audio.play();
 });
-
     </script>
         <div class="div-textAcasa">
     <p class="text" align="center"><font face="Franklin Gothic"><b>
         <?php echo $lang['textHome'] ?></b></font>
     </p>
     </div>
+
+    
     <pre>
-        <a class="nav-steag1" href="index.php?lang=en"><img src="poze/en.png" width=50px ></a>            <a class="nav-steag2" href="index.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    
-    </pre>
-        <div class="footer">
-            <p class="text-footer">
-                <font face="Franklin Gothic">
-                <?php echo $lang['textHome2'] ?>
-                </font>
-            </p>
-        </div>
+        <a class="nav-steag1" href="index.php?lang=en"><img src="poze/en.png" width=50px ></a>           
+        <a class="nav-steag2" href="index.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    
+
 </body>
 </html>
