@@ -1,9 +1,9 @@
 <?php
 
-    $db_server = 'localhost';
-    $db_user = 'root';
-    $db_pass = '';
-    $db_name = 'ear_3';
+    $db_server = 'sql101.epizy.com';
+    $db_user = 'epiz_34300412';
+    $db_pass = 'WxmoXuKwka';
+    $db_name = 'epiz_34300412_ear3database';
     $conn = '';
 
     try

@@ -321,6 +321,9 @@ body, html {
   height: 100%;
   width: 98.7%;
 }
+body {
+  cursor: url(altele/cursor.cur) auto;
+}
 
 
 .parallax {
@@ -370,4 +373,24 @@ body, html {
   .parallax {
     background-attachment: scroll;
   }
+}
+
+
+#top-button {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 9999;
+            opacity: 0;
+            border-radius: 10px;
+            transition: opacity 0.3s ease-in-out;
 }

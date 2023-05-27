@@ -10,9 +10,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.php">
-    <title>EAR-3 Market</title>
+    <title>EAR-3</title>
 
+    <script>
+        window.addEventListener('load', function() {
+            var topButton = document.getElementById('top-button');
+            var isShown = false;
 
+            function checkVisibility() {
+                if (window.scrollY > 0 && !isShown) {
+                    topButton.style.display = 'block';
+                    setTimeout(function() {
+                        topButton.style.opacity = '1';
+                    }, 100);
+                    isShown = true;
+                } else if (window.scrollY === 0 && isShown) {
+                    topButton.style.opacity = '0';
+                    setTimeout(function() {
+                        topButton.style.display = 'none';
+                    }, 300);
+                    isShown = false;
+                }
+            }
+
+            checkVisibility();
+
+            window.addEventListener('scroll', function() {
+                checkVisibility();
+            });
+
+            function scrollToTop() {
+                var currentPosition = window.scrollY;
+                var distance = currentPosition / 40;
+                var scrollAnimation = setInterval(function() {
+                    if (window.scrollY !== 0) {
+                        window.scrollBy(0, -distance);
+                    } else {
+                        clearInterval(scrollAnimation);
+                    }
+                }, 8);
+            }
+            
+            topButton.addEventListener('click', function() {
+                scrollToTop();
+            });
+        });
+
+        
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -81,8 +126,9 @@
 
 
 
-
-
+    <div id="top-button" onclick="scrollToTop()">
+        TOP
+    </div>
 
 </font>
 
