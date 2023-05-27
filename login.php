@@ -1,5 +1,6 @@
 <?php
-    include "config.php";
+    include("data-base.php");
+    include("config.php");
 ?>
 <!DOCTYPE html>
 <html lang="ro">
@@ -16,9 +17,9 @@
         <ul class="nav-ul">
             
         </ul>
-   </nav>
-   <div id="main">
-   <span id="open" class="nav-button">&#9776; <?php echo  $lang['menu'] ?></span>
+    </nav>
+    <div id="main">
+    <span id="open" class="nav-button">&#9776; <?php echo  $lang['menu'] ?></span>
     </div>
     <div id ="mySidenav" class="sidenav">
         <div class="box-c1">
@@ -34,7 +35,7 @@
             <li><a class="nav-a" href="support.php"><?php echo $lang['support'] ?></a></li>
             <li><a class="nav-a" href="login.php"><?php echo $lang['login'] ?></a></li><br><br><br><br>
 
-            <div class="div-textMeniu">
+<div class="div-textMeniu">
 <p align="center">
 <font size=5%><?php echo $lang['projects'] ?></font>
 </p>
@@ -59,19 +60,51 @@
         closeNav.addEventListener("click", ()=>{
             navSlide.classList.remove("navside");
         });
+        
         let playBtn = document.getElementsByClassName("div-cercMeniu");
         const audio = new Audio("poze/scula_bob.mp3");
         playBtn[0].addEventListener("click", (e) => {
   audio.play();
 });
     </script>
-        <div class="div-textDespre">
-    <p class="text">
-    <?php echo $lang['textAbout'] ?>
-    </p>
-    </div>
     <pre>
-        <a class="nav-steag1" href="about.php?lang=en"><img src="poze/en.png" width=50px ></a>            <a class="nav-steag2" href="about.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    
-    </pre>  
+        <a class="nav-steag1" href="store.php?lang=en"><img src="poze/en.png" width=50px ></a>            <a class="nav-steag2" href="store.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    
+    </pre>
+    <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
+        <div class="login" align=center>
+            <font color="white" size=25>Username:<br></font><br><br>
+            <input type="text" name="username"><br>
+            <font color="white" size=25>Password:<br></font><br><br>
+            <input type="password" name="password"><br>
+            <input type="submit" name="submit" value="intra">
+        </div>
+    </form>
+
 </body>
 </html>
+<?php 
+    if($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
+
+        if(empty($username))
+        {
+            echo"pune nume";
+        }
+        elseif(empty($password))
+        {
+            echo"pune parola bai";
+        }
+        else
+        {
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+            $sql = "INSERT INTO users (user, password)
+                    VALUES ('$username', '$hash')";
+                mysqli_query($conn, $sql);
+            echo"Logat mai";
+        }
+    }
+
+    mysqli_close($conn);
+?>

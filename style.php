@@ -270,6 +270,17 @@
     position:absolute;
     z-index: -1;  
 }
+.login {
+
+align="center"
+  width: 50px;
+  height: 250px;
+  background-color: #282828;
+  border: 1px solid #383838; 
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
 
  
 

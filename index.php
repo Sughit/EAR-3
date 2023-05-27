@@ -1,6 +1,7 @@
 <?php
-    include "config.php";
+    include("config.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -26,7 +27,7 @@
 
 
     <div id="main">
-        <span id="open" class="nav-button">&#9776; <?php echo  $lang['menu'] ?></span>
+        <span id="open" class="nav-button">&#9776; <?php echo $lang['menu'] ?></span>
     </div>
     <div id ="mySidenav" class="sidenav">
         <div class="box-c1">
@@ -39,7 +40,8 @@
             <li><a class="nav-a" href="store.php"><?php echo $lang['store'] ?></a></li>
             <li><a class="nav-a" href="community.php"><?php echo $lang['community'] ?></a></li>
             <li><a class="nav-a" href="about.php"><?php echo $lang['about'] ?></a></a></li>
-            <li><a class="nav-a" href="support.php"><?php echo $lang['support'] ?></a></li><br><br><br><br>
+            <li><a class="nav-a" href="support.php"><?php echo $lang['support'] ?></a></li>
+            <li><a class="nav-a" href="login.php"><?php echo $lang['login'] ?></a></li><br><br><br><br>
 
             <div class="div-textMeniu">
     <p align="center">
@@ -117,7 +119,6 @@
     </p>
     </div>
 
-    
     <pre>
         <a class="nav-steag1" href="index.php?lang=en"><img src="poze/en.png" width=50px ></a>           
         <a class="nav-steag2" href="index.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    

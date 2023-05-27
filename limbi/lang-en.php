@@ -5,6 +5,7 @@
         "community" => "Community",
         "about" => "About",
         "support" => "Support",
+        "login" => "Log in",
         "en" => "English",
         "ro" => "Romanian",
         "your-store" => "Your store",

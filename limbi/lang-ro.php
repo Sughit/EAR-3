@@ -5,6 +5,7 @@
         "community" => "Comunitate",
         "about" => "Despre",
         "support" => "Asistență",
+        "login" => "Conectare",
         "en" => "English",
         "ro" => "Romanian",
         "your-store" => "Magazinul tău",
