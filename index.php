@@ -116,7 +116,7 @@
 
 
 
-    <div class="mainul" align="center" >INTRODUCERE<br> <font size=5>Aici sunt postarile </font></div>
+    <div class="mainul" align="center" >NOUTĂȚI<br> <font size=5>Aici sunt postate stirile in legatura cu EAR-3 </font></div>
 <br><br>
     <div class="postare">Șoc si groază<br> <font size=5>a murit Ceaușescu </font></div>
 

@@ -322,7 +322,7 @@ body, html {
   width: 98.7%;
 }
 body {
-  cursor: url(altele/cursor.cur) auto;
+  cursor: url(altele/cursor.cur), auto;
 }
 
 
