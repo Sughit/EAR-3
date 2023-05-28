@@ -27,11 +27,12 @@
         </div>
 
         <ul class ="nav-list">
-            <li><a class="nav-a" href="index.php"><?php echo $lang['home'] ?></a></li>
+        <li><a class="nav-a" href="index.php"><?php echo $lang['home'] ?></a></li>
             <li><a class="nav-a" href="store.php"><?php echo $lang['store'] ?></a></li>
             <li><a class="nav-a" href="community.php"><?php echo $lang['community'] ?></a></li>
-            <li><a class="nav-a" href="about.php"><?php echo $lang['about'] ?></a></a></li>
-            <li><a class="nav-a" href="support.php"><?php echo $lang['support'] ?></a></li></a></li><br><br><br><br>
+            <li><a class="nav-a" href="about.php"><?php echo $lang['about'] ?></a></li>
+            <li><a class="nav-a" href="support.php"><?php echo $lang['support'] ?></a></li>
+            <li><a class="nav-a" href="login.php"><?php echo $lang['login'] ?></a></li><br><br><br><br>
 
             <div class="div-textMeniu">
 <p align="center">
