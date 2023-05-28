@@ -254,7 +254,7 @@
 }
 .div-copy
 {
-    transform: translate(0%, 420%);
+    transform: translate(0%, 580%);
 }
 .div-textMeniu
 {
@@ -282,7 +282,34 @@ align="center"
   font-family: Arial, sans-serif;
 }
 
- 
+.div-Project1
+{
+    top: 1.5%;
+    left: 20%;
+    height:50%;
+    position:fixed;
+    z-index: 1;  
+}
+
+.div-Project1 a
+{
+    padding: 10px 20px 8px 32px;
+    margin: 10px;
+    text-decoration: none;
+    font-size:25px;
+    font-weight:500;
+    color:#000;
+    display: block;
+    background-color: #b8b8ba;
+    transition: all 0.1s;
+    transform:translate(0%, 0%);
+}
+
+.div-Project1 a:hover
+{
+    background-color: #363647;
+    color:#fff;
+}
 
 
 

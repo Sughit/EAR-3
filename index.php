@@ -87,13 +87,6 @@
             <li><a class="nav-a" href="about.php"><?php echo $lang['about'] ?></a></a></li>
             <li><a class="nav-a" href="support.php"><?php echo $lang['support'] ?></a></li>
             <li><a class="nav-a" href="login.php"><?php echo $lang['login'] ?></a></li><br><br><br><br>
-
-            <div class="div-textMeniu">
-    <p align="center">
-        <font size=5%><?php echo $lang['projects'] ?></font>
-    </p>
-    </div>
-        <li><a class="nav-a" href="Project1.php"><?php echo $lang['Project1'] ?></a></li>
         </ul>
 
         <div class="div-copy">
@@ -102,6 +95,10 @@
             </p>
          </div>
 </div>
+     <div class ="div-Project1">
+
+     <a class="nav-a" href="Project1.php"><?php echo $lang['Project1'] ?></a></li>
+     </div>
 
 
 <div class="parallax" ></div>
