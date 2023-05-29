@@ -131,7 +131,7 @@
 
 .div-copy
 {
-    font-size:1.8vw;
+    font-size:1.2vw;
     color:white;
     position:absolute;
     top:90%;
@@ -210,7 +210,7 @@
 
 .div-copy
 {
-    font-size:3vw;
+    font-size:2vw;
     color:white;
     position:absolute;
     top:90%;
