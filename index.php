@@ -86,7 +86,6 @@
             <li><a class="nav-a" href="community.php"><?php echo $lang['community'] ?></a></li>
             <li><a class="nav-a" href="about.php"><?php echo $lang['about'] ?></a></a></li>
             <li><a class="nav-a" href="support.php"><?php echo $lang['support'] ?></a></li>
-            <li><a class="nav-a" href="login.php"><?php echo $lang['login'] ?></a></li><br><br><br><br>
         </ul>
 
         <div class="div-copy">
@@ -95,7 +94,10 @@
 </div>
      <div class ="div-Project1">
 
-     <a class="nav-a" href="Project1.php"><?php echo $lang['Project1'] ?></a></li>
+     <a class="nav-a" href="Project1.php"><?php echo $lang['Project1'] ?></a>
+     </div>
+     <div class= "div-login">
+     <a class="nav-a" href="login.php"><img src="poze/simbol_login.png" width=20px> <?php echo $lang['login'] ?></a>
      </div>
 
 

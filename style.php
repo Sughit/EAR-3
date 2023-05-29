@@ -50,9 +50,9 @@
 {
     display: flex;
     position: fixed;
-    top: 1%;
+    top: 1.3%;
     left: 5%;
-    scale: 60%;
+    scale: 70%;
 }
 
 #main span
@@ -144,7 +144,7 @@
     top: 2%;
     left: 25%;
     height:50%;
-    position:absolute;
+    position:fixed;
     z-index: 0;  
 }
 
@@ -166,6 +166,15 @@
 {
     background-color: #363647;
     color:#fff;
+}
+.div-login
+{
+    top: 3.8%;
+    left: 75vw;
+    height:50%;
+    position:fixed;
+    z-index: 1; 
+    font-size: 1vw;
 }
 }
 
@@ -214,7 +223,7 @@
     top: 2%;
     left: 32%;
     height:50%;
-    position:absolute;
+    position:fixed;
     z-index: 0;  
 }
 
@@ -223,7 +232,7 @@
     padding: 5% 10% 6% 0%;
     margin: 10px;
     text-decoration: none;
-    font-size:150%;
+    font-size:175%;
     font-weight:500;
     color:#000;
     display: block;
@@ -236,6 +245,15 @@
 {
     background-color: #363647;
     color:#fff;
+}
+.div-login
+{
+    top: 3.8%;
+    left: 75vw;
+    height:50%;
+    position:fixed;
+    z-index: 1; 
+    font-size: 0vw;
 }
 }
 
@@ -376,8 +394,7 @@
     z-index: -1;  
 }
 .login {
-
-align="center"
+    align="center"
   width: 50px;
   height: 250px;
   background-color: #282828;
@@ -387,6 +404,19 @@ align="center"
   font-family: Arial, sans-serif;
 }
 
+
+
+.div-login a
+{
+    background:0;
+    text-decoration: none;
+}
+
+.div-login a:hover
+{
+    background-color: #363647;
+    color:#fff;
+}
 
 
 
