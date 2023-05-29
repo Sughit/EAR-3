@@ -40,9 +40,7 @@ ini_set('display_errors', 1);
         </ul>
 
         <div class="div-copy">
-            <p class="text">
              ©EAR-3 2023-2023
-            </p>
          </div>
 </div>
      <div class ="div-Project1">

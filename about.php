@@ -36,15 +36,14 @@
         </ul>
 
         <div class="div-copy">
-            <p class="text">
              ©EAR-3 2023-2023
-            </p>
          </div>
 </div>
      <div class ="div-Project1">
 
      <a class="nav-a" href="Project1.php"><?php echo $lang['Project1'] ?></a></li>
      </div>
+     <script>
         const openNav =document.getElementById("open");
         const closeNav =document.getElementById("close");
         const navSlide =document.getElementById("mySidenav");

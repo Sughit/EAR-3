@@ -57,7 +57,7 @@
 
 #main span
 {
-   font-size: 30px; 
+   font-size: 210%; 
    color: white;
    padding: 0px 0px;
    border-radius: 5px;
@@ -69,7 +69,7 @@
    width:0;
    height: 100vh;
    position: relative;
-   z-index: 1;
+   z-index: 2;
    top: 0;
    left: 0; 
    transition: all 0.5s;
@@ -77,6 +77,7 @@
    opacity: 0;
    visibility: hidden;
    position: fixed;
+
 }
 .sidenav .box-c1
 {
@@ -84,16 +85,6 @@
     flex-direction: row;
     padding: 3px 15px;
     position: relative;
-}
-
-.sidenav .box-c1 a.logo
-{
-    font-size: 35px;
-    opacity:1;
-    color: #000000;
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
 }
 
 .sidenav .closebtn
@@ -106,37 +97,155 @@
     color: #fff;
     text-decoration:none;
     transition: all 0.02s linear;
+    z-index:1;
 }
+
+@media screen and (min-width: 1151px) {
+
 .sidenav .nav-list
 {
     padding: 0;
     list-style: none;
+    font-size:1vw;
 }
-
 .sidenav .nav-list a
 {
-    padding: 10px 8px 8px 32px;
-    margin: 10px;
+    padding: 3% 2% 2% 5%;
+    margin: 6%;
     text-decoration: none;
-    font-size:25px;
     font-weight:500;
+    font-size:160%;
     color:#000;
     display: block;
     background-color: #b8b8ba;
     transition: all 0.1s;
     transform:translate(0%, 0%);
 }
+
+.navside
+{
+    width: 17%;
+    visibility: visible;
+    opacity:0.95;
+}
+
+.div-copy
+{
+    font-size:1.8vw;
+    color:white;
+    position:absolute;
+    top:90%;
+    left:5%;
+}
+
+
+.div-Project1
+{
+    top: 2%;
+    left: 25%;
+    height:50%;
+    position:absolute;
+    z-index: 0;  
+}
+
+.div-Project1 a
+{
+    padding: 5% 10% 6% 0%;
+    margin: 10px;
+    text-decoration: none;
+    font-size:175%;
+    font-weight:500;
+    color:#000;
+    display: block;
+    background-color: #b8b8ba;
+    opacity:80%;
+    transition: all 0.1s;
+}
+
+.div-Project1 a:hover
+{
+    background-color: #363647;
+    color:#fff;
+}
+}
+
+@media screen and (max-width: 1150px) {
+
+.sidenav .nav-list
+{
+    padding: 0;
+    list-style: none;
+    font-size:1.35vw;
+}
+
+.sidenav .nav-list a
+{
+    padding: 8% 2% 8% 5%;
+    margin: 6%;
+    text-decoration: none;
+    font-weight:500;
+    font-size:200%;
+    color:#000;
+    display: block;
+    background-color: #b8b8ba;
+    transition: all 0.1s;
+    transform:translate(0%, 0%);
+}
+
+.navside
+{
+    width: 30%;
+    visibility: visible;
+    opacity:0.95;
+}
+
+.div-copy
+{
+    font-size:3vw;
+    color:white;
+    position:absolute;
+    top:90%;
+    left:5%;
+}
+
+
+.div-Project1
+{
+    top: 2%;
+    left: 32%;
+    height:50%;
+    position:absolute;
+    z-index: 0;  
+}
+
+.div-Project1 a
+{
+    padding: 5% 10% 6% 0%;
+    margin: 10px;
+    text-decoration: none;
+    font-size:150%;
+    font-weight:500;
+    color:#000;
+    display: block;
+    background-color: #b8b8ba;
+    opacity:80%;
+    transition: all 0.1s;
+}
+
+.div-Project1 a:hover
+{
+    background-color: #363647;
+    color:#fff;
+}
+}
+
+
 .sidenav .nav-list a:hover
 {
     background-color: #363647;
     color:#fff;
 }
-.navside
-{
-    width: 300px;
-    visibility: visible;
-    opacity:0.95;
-}
+
 .nav-b
 {
     color: white;
@@ -145,7 +254,7 @@
     display: inline-block;
     font-size: 120%;
     padding: 0.5% 0.9%;
-    border-radius: 3px;
+    border-radius: 2%;
     text-transform: uppercase;
     transform: translate(0%, 0%);
 }
@@ -252,10 +361,6 @@
 {
     transform: translate(20%, 0%);
 }
-.div-copy
-{
-    transform: translate(0%, 580%);
-}
 .div-textMeniu
 {
     background-color: #000;
@@ -282,34 +387,6 @@ align="center"
   font-family: Arial, sans-serif;
 }
 
-.div-Project1
-{
-    top: 1.5%;
-    left: 20%;
-    height:50%;
-    position:fixed;
-    z-index: 1;  
-}
-
-.div-Project1 a
-{
-    padding: 10px 20px 8px 32px;
-    margin: 10px;
-    text-decoration: none;
-    font-size:25px;
-    font-weight:500;
-    color:#000;
-    display: block;
-    background-color: #b8b8ba;
-    transition: all 0.1s;
-    transform:translate(0%, 0%);
-}
-
-.div-Project1 a:hover
-{
-    background-color: #363647;
-    color:#fff;
-}
 
 
 

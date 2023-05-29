@@ -90,9 +90,7 @@
         </ul>
 
         <div class="div-copy">
-            <p class="text">
              ©EAR-3 2023-2023
-            </p>
          </div>
 </div>
      <div class ="div-Project1">
@@ -165,6 +163,7 @@
     <pre>
         <a class="nav-steag1" href="index.php?lang=en"><img src="poze/en.png" width=50px ></a>           
         <a class="nav-steag2" href="index.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    
+</pre>
 
 </body>
 </html>
