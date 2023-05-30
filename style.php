@@ -169,7 +169,7 @@
     font-weight:500;
     color:#fff;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; 
-    background-size: 69vw 28vh;
+    background-size: 72vw 28vh;
     display: block;
     background-image: url('poze/poza_masina.png');
     transition: all 0.1s;
@@ -271,7 +271,7 @@
     font-weight:500;
     color:#fff;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; 
-    background-size: 69vw 8vh;
+    background-size: 72vw 8vh;
     display: block;
     background-image: url('poze/poza_masina.png');
     transition: all 0.1s;
