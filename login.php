@@ -107,7 +107,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO users (username, password)
                 VALUES ('$username' , '$hash')";
         if (mysqli_query($conn, $sql)) {
-            echo "Utilizator adăugat cu succes";
+
+            echo '<script language="javascript">';
+            echo 'alert("Utilizator adăugat cu succes")';
+            echo '</script>';
         } else {
             echo "Eroare la adăugarea utilizatorului: " . mysqli_error($conn);
         }
