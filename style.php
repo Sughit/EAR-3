@@ -205,12 +205,21 @@
 {
     font-size:0vw;
 }
-
-
 }
 
 @media screen and (max-width: 1150px) {
 
+    #main
+{
+    scale:65%;
+    left:-2vw;
+    top:1.2vh;
+}
+
+.sidenav .closebtn
+{
+    background-color:red;
+}
 .sidenav .nav-list
 {
     padding: 0;
@@ -254,8 +263,8 @@
 }
 .div-login
 {
-    top: 3.5vh;
-    left: 65vw;
+    top: 4.2vh;
+    left: 55vw;
     height:50%;
     position:fixed;
     z-index: 1; 
@@ -265,8 +274,8 @@
 }
 .div-detjc
 {
-    top:2.8vh; 
-    left:45vw;
+    top:4vh; 
+    left:30vw;
     z-index:1;
     color:#fff;
     position:fixed;
@@ -274,14 +283,13 @@
 
 .div-detjc > details
 {   
-    font-size:200%;
+    font-size:150%;
     color:#fff;
 }
 
 .div-detjc > details > summary
 {
     list-style: none;
-    opacity:75%;
     color:#fff;
 }
 .div-detjc > details[open] > summary
