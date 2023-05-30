@@ -51,7 +51,7 @@
 {
     display: flex;
     position: fixed;
-    top: 1.3%;
+    top: 1.6vh;
     left: 5%;
     scale: 70%;
 }
@@ -254,8 +254,8 @@
 }
 .div-login
 {
-    top: 3.8%;
-    left: 75vw;
+    top: 3.5vh;
+    left: 65vw;
     height:50%;
     position:fixed;
     z-index: 1; 
@@ -265,7 +265,7 @@
 }
 .div-detjc
 {
-    top:3.5vh; 
+    top:2.8vh; 
     left:45vw;
     z-index:1;
     color:#fff;
@@ -274,7 +274,7 @@
 
 .div-detjc > details
 {   
-    font-size:4vw;
+    font-size:200%;
     color:#fff;
 }
 
