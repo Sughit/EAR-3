@@ -155,23 +155,21 @@
 
 .div-Project1
 {
-    top: 2%;
-    left: 25%;
+    top:30vh;
+    left:-5vw;
     height:50%;
-    position:fixed;
-    z-index: 0; 
+    position:absolute;
+    z-index: 1;
 }
 
 .div-Project1 a
 {
-    padding: 0.2vw 0.2vw 0.5vw 0%;
-    margin: 10px;
     text-decoration: none;
-    font-size:175%;
+    font-size:10vw;
     font-weight:500;
     color:#fff;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; 
-    background-size: 10vw 7vh;
+    background-size: 69vw 28vh;
     display: block;
     background-image: url('poze/poza_masina.png');
     transition: all 0.1s;
@@ -180,7 +178,7 @@
 
 .div-Project1 a:hover
 {
-    font-size:200%;
+    font-size:12vw;
     opacity:100%;
     background-color: #363647;
     color:#fff;   
@@ -257,9 +255,35 @@
     left:5%;
 }
 
+.div-Project1
+{
+    top:30vh;
+    left:-5vw;
+    height:50%;
+    position:absolute;
+    z-index: 1;
+}
+
 .div-Project1 a
 {
-    font-size:0%;
+    text-decoration: none;
+    font-size:10vw;
+    font-weight:500;
+    color:#fff;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; 
+    background-size: 69vw 8vh;
+    display: block;
+    background-image: url('poze/poza_masina.png');
+    transition: all 0.1s;
+    opacity:65%; 
+}
+
+.div-Project1 a:hover
+{
+    font-size:10vw;
+    opacity:100%;
+    background-color: #363647;
+    color:#fff;   
 }
 .div-login
 {

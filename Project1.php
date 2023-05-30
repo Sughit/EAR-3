@@ -22,7 +22,7 @@
     </div>
     <div id ="mySidenav" class="sidenav">
         <div class="box-c1">
-            <a href="#" class="logo"><div class="div-cercMeniu">  <img src="poze/logo_ureche_numai_cerc.png" width=55%></div></a>
+            <div class="div-cercMeniu">  <img src="poze/logo_ureche_numai_cerc.png" width=55%></div>
             <a href="#" class="closebtn" id="close"> &times;</a>          
         </div>
 
@@ -38,23 +38,11 @@
              ©EAR-3 2023-2023
          </div>
 </div>
-     <div class ="div-Project1">
 
-     <a class="nav-a" href="Project1.php"><?php echo $lang['Project1'] ?></a></li>
-     </div>
      <div class= "div-login">
      <a class="nav-a" href="login.php"><img src="poze/simbol_login.png" width=20px> <?php echo $lang['login'] ?></a>
      </div>
-
-     <div class="div-detjc">
-     <details> 
-        <summary><?php echo $lang['Games'] ?></summary>
-        <ul class ="div-detjc-ul">
-            <li><a class="nav-a" href="Project1.php"><?php echo $lang['Project1'] ?></a></li>
-    </ul>
-    </details>
-    </div>
-    
+  
     <script>
         const openNav =document.getElementById("open");
         const closeNav =document.getElementById("close");
