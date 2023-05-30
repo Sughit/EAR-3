@@ -94,28 +94,25 @@ ini_set('display_errors', 1);
 </body>
 </html>
 <?php 
-    if($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
-        $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
+    $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
 
-        if(empty($username))
-        {
-            echo"pune nume";
-        }
-        elseif(empty($password))
-        {
-            echo"pune parola bai";
-        }
-        else
-        {
-            $hash = password_hash($password, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO users (user, password)
-                    VALUES ('$username' , '$hash')";
-                mysqli_query($conn, $sql);
-            echo"Logat mai";
+    if (empty($username)) {
+        echo "Pune nume";
+    } elseif (empty($password)) {
+        echo "Pune parola bai";
+    } else {
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO users (username, password)
+                VALUES ('$username' , '$hash')";
+        if (mysqli_query($conn, $sql)) {
+            echo "Utilizator adăugat cu succes";
+        } else {
+            echo "Eroare la adăugarea utilizatorului: " . mysqli_error($conn);
         }
     }
+}
 
-    mysqli_close($conn);
+mysqli_close($conn);
 ?>
