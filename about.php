@@ -45,6 +45,17 @@
      <div class= "div-login">
      <a class="nav-a" href="login.php"><img src="poze/simbol_login.png" width=20px> <?php echo $lang['login'] ?></a>
      </div>
+
+     <div class="div-detjc">
+     <details> 
+        <summary><?php echo $lang['Games'] ?></summary>
+        <ul class ="div-detjc-ul">
+            <li><a class="nav-a" href="Project1.php"><?php echo $lang['Project1'] ?></a></li>
+    </ul>
+    </details>
+    </div>
+
+    
      <script>
         const openNav =document.getElementById("open");
         const closeNav =document.getElementById("close");

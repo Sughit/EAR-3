@@ -101,6 +101,15 @@
      </div>
 
 
+<div class="div-detjc">
+     <details> 
+        <summary><?php echo $lang['Games'] ?></summary>
+        <ul class ="div-detjc-ul">
+            <li><a class="nav-a" href="Project1.php"><?php echo $lang['Project1'] ?></a></li>
+    </ul>
+    </details>
+    </div>
+
 <div class="parallax" ></div>
  
 <div style="height:1000px;background-color:#202020;font-size:36px" class='rounded-corners'>
@@ -156,14 +165,9 @@
   audio.play();
 });
     </script>
-        <div class="div-textAcasa">
-    <p class="text" align="center"><font face="Franklin Gothic"><b>
-        <?php echo $lang['textHome'] ?></b></font>
-    </p>
-    </div>
 
     <pre>
-        <a class="nav-steag1" href="index.php?lang=en"><img src="poze/en.png" width=50px ></a>           
+        <a class="nav-steag1" href="index.php?lang=en"><img src="poze/en.png" width=50px ></a>
         <a class="nav-steag2" href="index.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    
 </pre>
 

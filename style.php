@@ -7,6 +7,7 @@
 }
 .body
 {
+    cursor: url(altele/cursor.cur), default;
     background-color: #31313D;
     overflow-x: hidden;
 }
@@ -129,6 +130,19 @@
     opacity:0.95;
 }
 
+.sidenav .nav-list a:hover
+{
+    background-color: #363647;
+    color:#fff;
+    font-size:210%;
+}
+
+.sidenav .closebtn:hover
+{
+    color:red;
+}
+
+
 .div-copy
 {
     font-size:1.2vw;
@@ -145,27 +159,31 @@
     left: 25%;
     height:50%;
     position:fixed;
-    z-index: 0;  
+    z-index: 0; 
 }
 
 .div-Project1 a
 {
-    padding: 5% 10% 6% 0%;
+    padding: 0.2vw 0.2vw 0.5vw 0%;
     margin: 10px;
     text-decoration: none;
     font-size:175%;
     font-weight:500;
-    color:#000;
+    color:#fff;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; 
+    background-size: 10vw 7vh;
     display: block;
-    background-color: #b8b8ba;
-    opacity:80%;
+    background-image: url('poze/poza_masina.png');
     transition: all 0.1s;
+    opacity:65%; 
 }
 
 .div-Project1 a:hover
 {
+    font-size:200%;
+    opacity:100%;
     background-color: #363647;
-    color:#fff;
+    color:#fff;   
 }
 .div-login
 {
@@ -176,6 +194,19 @@
     z-index: 1; 
     font-size: 1vw;
 }
+
+.div-login a:hover
+{
+    font-size:130%;
+    background-color: #363647;
+    color:#fff;
+}
+.div-detjc > details > summary
+{
+    font-size:0vw;
+}
+
+
 }
 
 @media screen and (max-width: 1150px) {
@@ -217,34 +248,9 @@
     left:5%;
 }
 
-
-.div-Project1
-{
-    top: 2%;
-    left: 32%;
-    height:50%;
-    position:fixed;
-    z-index: 0;  
-}
-
 .div-Project1 a
 {
-    padding: 5% 10% 6% 0%;
-    margin: 10px;
-    text-decoration: none;
-    font-size:175%;
-    font-weight:500;
-    color:#000;
-    display: block;
-    background-color: #b8b8ba;
-    opacity:80%;
-    transition: all 0.1s;
-}
-
-.div-Project1 a:hover
-{
-    background-color: #363647;
-    color:#fff;
+    font-size:0%;
 }
 .div-login
 {
@@ -255,6 +261,48 @@
     z-index: 1; 
     font-size: 0vw;
 }
+
+}
+.div-detjc
+{
+    top:3.5vh; 
+    left:45vw;
+    z-index:1;
+    color:#fff;
+    position:fixed;
+}
+
+.div-detjc > details
+{   
+    font-size:4vw;
+    color:#fff;
+}
+
+.div-detjc > details > summary
+{
+    list-style: none;
+    opacity:75%;
+    color:#fff;
+}
+.div-detjc > details[open] > summary
+{
+    list-style: none;
+}
+.div-detjc a
+{
+    text-decoration:none;
+    padding: 0.2vw 0.2vw 0.5vw 0%;
+    font-size:4vw;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    background-image: url('poze/poza_masina.png');
+    background-size: 25vw 5vh;
+    transform:translate(-12vw,0%);
+    
+    
+}
+.div-detjc ul
+{
+    list-style-type: none; 
 }
 
 
@@ -412,12 +460,6 @@
     text-decoration: none;
 }
 
-.div-login a:hover
-{
-    background-color: #363647;
-    color:#fff;
-}
-
 
 
 
@@ -454,9 +496,6 @@
 body, html {
   height: 100%;
   width: 98.7%;
-}
-body {
-  cursor: url(altele/cursor.cur), auto;
 }
 
 

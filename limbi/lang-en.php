@@ -19,7 +19,8 @@
         "textAbout"=> "Here is something called 'About'. Maybe you'll find more about us. You never know.",
         "textSupport"=> "Help. No, seriously. I need help.",
         "projects"=> "PROJECTS",
-        "Project1"=> "Project-1",
-        "textProject1"=> "This is the first project that we take more seriously (it contains cars)"
+        "Project1"=> "Cars Game",
+        "textProject1"=> "This is the first project that we take more seriously (it contains cars)",
+        "Games"=> "Games"
     );
 ?>

@@ -19,7 +19,8 @@
         "textAbout"=> "Aici este ceva numit 'despre'. poate aflati mai multe despre noi, mai stii?",
         "textSupport"=> "Ajutor. Nu, serios. am nevoide de ajutor.",
         "projects"=> "PROIECTE",
-        "Project1"=> "Proiect-1",
-        "textProject1"=> "Acesta este primul proiect mai serios(va fi cu masini)"
+        "Project1"=> "Joc Masini",
+        "textProject1"=> "Acesta este primul proiect mai serios(va fi cu masini)",
+        "Games"=> "Jocuri"
     );
 ?>
