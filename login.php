@@ -1,10 +1,33 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
     include("data-base.php");
     include("config.php");
+
+    $message = ""; // Variabila pentru a stoca mesajele de eroare sau de succes
+
+    // Verifică dacă s-a efectuat o cerere POST
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
+
+        if (empty($username)) {
+            $message = "Pune nume";
+        } elseif (empty($password)) {
+            $message = "Pune parola bai";
+        } else {
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+            $sql = "INSERT INTO users (username, password)
+                    VALUES ('$username', '$hash')";
+            if (mysqli_query($conn, $sql)) {
+                $message = "Utilizator adăugat cu succes";
+            } else {
+                $message = "Eroare la adăugarea utilizatorului: " . mysqli_error($conn);
+            }
+        }
+    }
+
+    mysqli_close($conn);
 ?>
+
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -24,13 +47,13 @@ ini_set('display_errors', 1);
     <div id="main">
         <span id="open" class="nav-button">&#9776; <?php echo $lang['menu'] ?></span>
     </div>
-    <div id ="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav">
         <div class="box-c1">
             <div class="div-cercMeniu">  <img src="poze/logo_ureche_numai_cerc.png" width=55%></div>
             <a href="#" class="closebtn" id="close"> &times;</a>          
         </div>
 
-        <ul class ="nav-list">
+        <ul class="nav-list">
             <li><a class="nav-a" href="index.php"><?php echo $lang['home'] ?></a></li>
             <li><a class="nav-a" href="store.php"><?php echo $lang['store'] ?></a></li>
             <li><a class="nav-a" href="community.php"><?php echo $lang['community'] ?></a></li>
@@ -39,70 +62,52 @@ ini_set('display_errors', 1);
         </ul>
 
         <div class="div-copy">
-             ©EAR-3 2023-2023
-         </div>
-</div>
-     <div class= "div-login">
-     <a class="nav-a" href="login.php"><img src="poze/simbol_login.png" width=20px> <?php echo $lang['login'] ?></a>
-     </div>
+            ©EAR-3 2023-2023
+        </div>
+    </div>
+    <div class="div-login">
+        <a class="nav-a" href="login.php"><img src="poze/simbol_login.png" width=20px> <?php echo $lang['login'] ?></a>
+    </div>
 
     <script>
-        const openNav =document.getElementById("open");
-        const closeNav =document.getElementById("close");
-        const navSlide =document.getElementById("mySidenav");
+        const openNav = document.getElementById("open");
+        const closeNav = document.getElementById("close");
+        const navSlide = document.getElementById("mySidenav");
 
-        openNav.addEventListener("click", ()=>{
+        openNav.addEventListener("click", () => {
             navSlide.classList.add("navside");
         });
 
-        closeNav.addEventListener("click", ()=>{
+        closeNav.addEventListener("click", () => {
             navSlide.classList.remove("navside");
         });
-        
+
         let playBtn = document.getElementsByClassName("div-cercMeniu");
         const audio = new Audio("poze/scula_bob.mp3");
         playBtn[0].addEventListener("click", (e) => {
-  audio.play();
-});
+            audio.play();
+        });
     </script>
-    <pre>
-        <a class="nav-steag1" href="store.php?lang=en"><img src="poze/en.png" width=50px ></a>            <a class="nav-steag2" href="store.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    
-    </pre>
-    <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
-        <div class="login" align=center>
-            <font color="white" size=25>Username:<br></font><br><br>
-            <input type="text" name="username"><br>
-            <font color="white" size=25>Password:<br></font><br><br>
-            <input type="password" name="password"><br>
-            <input type="submit" name="submit" value="intra">
+    <div class="login-form" align=center>
+        <div class="text">
+            LOGIN
         </div>
-    </form>
-
+        <form method="post">
+            <div class="field">
+                <div class="fas fa-envelope"></div>
+                <input type="text" name="username" placeholder="User">
+            </div>
+            <div class="field">
+                <div class="fas fa-lock"></div>
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <button type="submit">LOGIN</button>
+            <div class="link">
+                Not a member?
+                <a href="http://ear3.42web.io/register.php">Signup now</a>
+            </div>
+        </form>
+    </div>
+    <div class="message"><?php echo $message; ?></div>
 </body>
 </html>
-<?php 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
-    $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
-
-    if (empty($username)) {
-        echo "Pune nume";
-    } elseif (empty($password)) {
-        echo "Pune parola bai";
-    } else {
-        $hash = password_hash($password, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO users (username, password)
-                VALUES ('$username' , '$hash')";
-        if (mysqli_query($conn, $sql)) {
-
-            echo '<script language="javascript">';
-            echo 'alert("Utilizator adăugat cu succes")';
-            echo '</script>';
-        } else {
-            echo "Eroare la adăugarea utilizatorului: " . mysqli_error($conn);
-        }
-    }
-}
-
-mysqli_close($conn);
-?>
