@@ -8,6 +8,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
+        $password_again = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
 
         if (empty($username)) {
             $message = "Pune nume";
@@ -22,6 +23,12 @@
             } else {
                 $message = "Eroare la adăugarea utilizatorului: " . mysqli_error($conn);
             }
+        }
+
+        //Verificam daca cele doua parole coincid
+        if($password != $password_again)
+        {
+            echo"Parolele nu coincid";
         }
         mysqli_close($conn);
     }
@@ -90,25 +97,25 @@
     </script>
     <div class="login-form" align=center>
         <div class="text">
-            Sign Up
+            <?php echo $lang['signup'] ?>
         </div>
         <form method="post">
             <div class="field">
                 <div class="fas fa-envelope"></div>
-                <input type="text" name="username" placeholder="User">
+                <input type="text" name="username" placeholder="<?php echo $lang['user-placeholder'] ?>">
             </div>
             <div class="field">
                 <div class="fas fa-lock"></div>
-                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="password" placeholder="<?php echo $lang['password-placeholder'] ?>">
             </div>
             <div class="field">
                 <div class="fas fa-lock"></div>
-                <input type="password" name="password-again" placeholder="Verify password">
+                <input type="password" name="password_again" placeholder="<?php echo $lang['password-placeholder-2'] ?>">
             </div>
-            <button type="submit">Sign up</button>
+            <button type="submit"><?php echo $lang['signup'] ?></button>
             <div class="link">
-                Already have an account ?
-                <a href="login.php">Login</a>
+                <?php echo $lang['yes-member'] ?>
+                <a href="login.php"><?php echo $lang['login'] ?></a>
             </div>
         </form>
     </div>

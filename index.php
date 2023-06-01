@@ -108,9 +108,9 @@
 
 
 
-    <div class="mainul" align="center" >NOUTĂȚI<br> <font size=5>Aici sunt postate stirile in legatura cu EAR-3 </font></div>
+    <div class="mainul" align="center" ><?php echo $lang['news'] ?><br> <font size=5><?php echo $lang['news-head'] ?> </font></div>
 <br><br>
-    <div class="postare">Șoc si groază<br> <font size=5>a murit Ceaușescu </font></div>
+    <div class="postare"><?php echo $lang['post-title'] ?><br> <font size=5><?php echo $lang['post'] ?> </font></div>
 
 
 

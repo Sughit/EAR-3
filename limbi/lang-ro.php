@@ -5,12 +5,28 @@
         "community" => "Comunitate",
         "about" => "Despre",
         "support" => "Asistență",
-        "login" => "Conectare",
         "en" => "English",
         "ro" => "Romanian",
         "your-store" => "Magazinul tău",
         "categories" => "Categorii",
-        "news" => "Stiri",
+        "news" => "NOUTĂȚI",
+        "news-head" => "Aici sunt postate știrile în legătură cu EAR-3",
+
+        //Pentru postari
+        "post-title" => "Șoc și groază",
+        "post" => "A trecut Ceaușescu la cele sfinte",
+
+        //Login chestii
+        "login" => "Conectare",
+        "login-now" => "Conentează-te acum",
+        "signup" => "Înregistrează-te",
+        "signup-now" => "Înregistrează-te acum",
+        "user-placeholder" => "Nume",
+        "password-placeholder" => "Parolă",
+        "password-placeholder-2" => "Verifică parola",
+        "not-member" => "Nu ai cont? ",
+        "yes-member" => "Ai deja un cont? ",
+
         "menu" =>"Meniu",
         "textHome"=> "3 oameni extrem de eleganti si rafinati",
         "textHome2" => "Aici este partea de jos a paginii lmao",

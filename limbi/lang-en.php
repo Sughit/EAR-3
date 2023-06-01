@@ -5,12 +5,29 @@
         "community" => "Community",
         "about" => "About",
         "support" => "Support",
-        "login" => "Log in",
         "en" => "English",
         "ro" => "Romanian",
         "your-store" => "Your store",
         "categories" => "Categories",
-        "news" => "News",
+        "news" => "NEWS",
+        "news-head" => "Here are posted news about EAR-3",
+
+        //Pentru postari
+        "post-title" => "OMG",
+        "post" => "Ceaușescu died",
+
+        //Login chestii
+        "login" => "Log in",
+        "login-now" => "Log in now",
+        "signup" => "Sign up",
+        "signup-now" => "Sign up now",
+        "user-placeholder" => "User",
+        "password-placeholder" => "Password",
+        "password-placeholder-2" => "Verify password",
+        "not-member" => "Not a member? ",
+        "yes-member" => "Already have an account? ",
+
+
         "menu" => "Menu",
         "textHome" => "3 extremly fine and fancy men",
         "textHome2" => "Here is the down part of the page lmao",

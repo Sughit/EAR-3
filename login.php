@@ -1,32 +1,30 @@
 <?php
-    include("data-base.php");
-    include("config.php");
+include("config.php");
+include("data-base.php");
+$message = ""; // Variabila pentru a stoca mesajele de eroare sau de succes
 
-    $message = ""; // Variabila pentru a stoca mesajele de eroare sau de succes
-
-    // Verifică dacă s-a efectuat o cerere POST
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
-        $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
-
-        if (empty($username)) {
-            $message = "Pune nume";
-        } elseif (empty($password)) {
-            $message = "Pune parola bai";
-        } else {
-            $hash = password_hash($password, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO users (username, password)
-                    VALUES ('$username', '$hash')";
-            if (mysqli_query($conn, $sql)) {
-                $message = "Utilizator adăugat cu succes";
-            } else {
-                $message = "Eroare la adăugarea utilizatorului: " . mysqli_error($conn);
+        if (isset($_POST["login"])) {
+           $username = $_POST["username"];
+           $password = $_POST["password"];
+            require_once "data-base.php";
+            $sql = "SELECT * FROM users WHERE username = '$username'";
+            $result = mysqli_query($conn, $sql);
+            $user_now = mysqli_fetch_array($result, MYSQLI_ASSOC);
+            if ($user_now) {
+                if (password_verify($password, $user_now["password"])) {
+                    session_start();
+                    $_SESSION["username"] = "yes";
+                    header("Location: index.php");
+                    die();
+                }else{
+                    echo "Password does not match";
+                }
+            }else{
+                echo "Email does not match";
             }
         }
-        mysqli_close($conn);
-    }
+        ?>
 
-?>
 
 <!DOCTYPE html>
 <html lang="ro">
@@ -90,21 +88,21 @@
     </script>
     <div class="login-form" align=center>
         <div class="text">
-            LOGIN
+            <?php echo $lang['login'] ?>
         </div>
-        <form method="post">
+        <form action="login.php" method="post">
             <div class="field">
                 <div class="fas fa-envelope"></div>
-                <input type="text" name="username" placeholder="User">
+                <input type="text" name="username" placeholder="<?php echo $lang['user-placeholder'] ?>">
             </div>
             <div class="field">
                 <div class="fas fa-lock"></div>
-                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="password" placeholder="<?php echo $lang['password-placeholder'] ?>">
             </div>
-            <button type="submit">LOGIN</button>
+            <button type="submit" name="login"><?php echo $lang['login'] ?></button>
             <div class="link">
-                Not a member?
-                <a href="register.php">Signup now</a>
+                <?php echo $lang['not-member'] ?>
+                <a href="register.php"><?php echo $lang['signup-now'] ?></a>
             </div>
         </form>
     </div>
