@@ -90,7 +90,7 @@
     </script>
     <div class="login-form" align=center>
         <div class="text">
-            LOGIN
+            Sign Up
         </div>
         <form method="post">
             <div class="field">
@@ -101,10 +101,14 @@
                 <div class="fas fa-lock"></div>
                 <input type="password" name="password" placeholder="Password">
             </div>
-            <button type="submit">LOGIN</button>
+            <div class="field">
+                <div class="fas fa-lock"></div>
+                <input type="password" name="password-again" placeholder="Verify password">
+            </div>
+            <button type="submit">Sign up</button>
             <div class="link">
-                Not a member?
-                <a href="register.php">Signup now</a>
+                Already have an account ?
+                <a href="login.php">Login</a>
             </div>
         </form>
     </div>
