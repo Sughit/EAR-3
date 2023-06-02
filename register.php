@@ -4,100 +4,85 @@
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
 
-    //autoloaderul lui Composer
-    require 'phpmailer/vendor/autoload.php';
-
     include("data-base.php");
     include("config.php");
+
+    function sendMail($email, $v_code)
+    {
+        require("PHPMailer/PHPMailer.php");
+        require("PHPMailer/SMTP.php");
+        require("PHPMailer/Exception.php");
+
+        $mail = new PHPMailer(true);
+
+        try {
+            $mail->isSMTP();                                            //Send using SMTP
+            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+            $mail->Username   = 'ear3.ro@gmail.com';                     //SMTP username
+            $mail->Password   = 'EmanuelAndreiRobert333';                               //SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        
+            //Recipients
+            $mail->setFrom('ear3.ro@gmail.com', 'EAR-3 Market');
+            $mail->addAddress($email);
+        
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = 'Email Verification form';
+            $mail->Body    = "Mersi de inregistrare! Da click pentru a verifica emailul <a href='verify.php?email=$email&v_code=$v_code'>Link</a>";
+        
+            $mail->send();
+            echo 'Message has been sent';
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+    }
 
     $message = ""; // Variabila pentru a stoca mesajele de eroare sau de succes
 
     // Verifică dacă s-a efectuat o cerere POST
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") 
+    {
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
         $password_again = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_SPECIAL_CHARS);
 
-        //Dam adevarat la creare de mail
-        $mail = new PHPMailer(true);
-
-        try
-        {
-            //Debug la nu stiu ce
-            $mail->SMTPDebug = 0;
-
-            //Trimitem prin SMTP
-            $mail->isSMTP();
-
-            //Serverul care are emailul
-            $mail->Host = 'smtp.gmail.com';
-
-            //Autentificare
-            $mail->SMTPAuth = true;
-
-            //Userul de la email
-            $mail->Usrname = 'Emisor.bot@gmail.com';
-
-            //Parola de la email
-            $mail->Password = 'emisor.bot2007';
-
-            //Encriptare prin TLS
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STRATTLS;
-
-            //Tutorialul zice ceva ca portul pentru cea de mai sus este 465
-            //Portul 
-            $mail->Port = 587;
-
-            //Recipient (borcan)
-            $mail->setForm('Emisor-bot@gmail.com', 'EAR-3 Market.com');
-
-            //Adauga un recipient
-            $mail->addAddress($email, $username);
-
-            //Formatul emailul in HTML
-            $mail->isHTML(true);
-
-            $verification_code = substr(number_format(time() * rand(), 0, '', ''), 0, 6);
-
-            $mail->Subject = 'Email verification';
-            $mail->Body = '<p>Your verification code is: <b style="font-size: 30px;">' . 
-                          $verification_code . '</b></p>';
-
-            $mail->send();
-            
-            header("Location: email-verification.php?email=" . $email);
-            exit();
-        }
-        catch(Exception $e)
-        {
-            echo "Mesajul nu a putut fi trimis. Mailer Error: {$mail->ErrorInfo}";
-        }
-
-        if (empty($username)) {
-            $message = "Pune nume";
-        } 
-        elseif (empty($email)){
-            $message = "Pune email";
-        } elseif (empty($password)) {
-            $message = "Pune parola bai";
-        } else {
-            $hash = password_hash($password, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO users (username, password, email)
-                    VALUES ('$username', '$hash', '$email')";
-            if (mysqli_query($conn, $sql)) {
-                $message = "Utilizator adăugat cu succes";
-            } else {
-                $message = "Eroare la adăugarea utilizatorului: " . mysqli_error($conn);
+            if (empty($username)) 
+            {
+                $message = "Pune nume";
+            } 
+            elseif (empty($email))
+            {
+                $message = "Pune email";
+            } 
+            elseif (empty($password)) 
+            {
+                $message = "Pune parola bai";
+            } 
+            else 
+            {
+                $hash = password_hash($password, PASSWORD_DEFAULT);
+                $v_code = bin2hex(random_bytes(16));
+                $sql = "INSERT INTO users (username, password, email, verification_code, is_verified )
+                        VALUES ('$username', '$hash', '$email', '$v_code', '0')";
+                if (mysqli_query($conn, $sql) && sendMail($_POST['email'], $v_code)) 
+                {
+                    $message = "Utilizator adăugat cu succes";
+                } 
+                else 
+                {
+                    $message = "Eroare la adăugarea utilizatorului: " . mysqli_error($conn);
+                }
             }
-        }
-
-        //Verificam daca cele doua parole coincid
-        if($password != $password_again)
-        {
-            echo"Parolele nu coincid";
-        }
-        mysqli_close($conn);
+    
+            //Verificam daca cele doua parole coincid
+            if($password != $password_again)
+            {
+                echo"Parolele nu coincid";
+            }
     }
 
 ?>
