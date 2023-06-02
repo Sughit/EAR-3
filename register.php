@@ -1,4 +1,12 @@
 <?php
+    //Import clasele lu' phpmailer
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+
+    //autoloaderul lui Composer
+    require 'phpmailer/vendor/autoload.php';
+
     include("data-base.php");
     include("config.php");
 
@@ -9,15 +17,74 @@
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
         $password_again = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
+        $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_SPECIAL_CHARS);
+
+        //Dam adevarat la creare de mail
+        $mail = new PHPMailer(true);
+
+        try
+        {
+            //Debug la nu stiu ce
+            $mail->SMTPDebug = 0;
+
+            //Trimitem prin SMTP
+            $mail->isSMTP();
+
+            //Serverul care are emailul
+            $mail->Host = 'smtp.gmail.com';
+
+            //Autentificare
+            $mail->SMTPAuth = true;
+
+            //Userul de la email
+            $mail->Usrname = 'Emisor.bot@gmail.com';
+
+            //Parola de la email
+            $mail->Password = 'emisor.bot2007';
+
+            //Encriptare prin TLS
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STRATTLS;
+
+            //Tutorialul zice ceva ca portul pentru cea de mai sus este 465
+            //Portul 
+            $mail->Port = 587;
+
+            //Recipient (borcan)
+            $mail->setForm('Emisor-bot@gmail.com', 'EAR-3 Market.com');
+
+            //Adauga un recipient
+            $mail->addAddress($email, $username);
+
+            //Formatul emailul in HTML
+            $mail->isHTML(true);
+
+            $verification_code = substr(number_format(time() * rand(), 0, '', ''), 0, 6);
+
+            $mail->Subject = 'Email verification';
+            $mail->Body = '<p>Your verification code is: <b style="font-size: 30px;">' . 
+                          $verification_code . '</b></p>';
+
+            $mail->send();
+            
+            header("Location: email-verification.php?email=" . $email);
+            exit();
+        }
+        catch(Exception $e)
+        {
+            echo "Mesajul nu a putut fi trimis. Mailer Error: {$mail->ErrorInfo}";
+        }
 
         if (empty($username)) {
             $message = "Pune nume";
+        } 
+        elseif (empty($email)){
+            $message = "Pune email";
         } elseif (empty($password)) {
             $message = "Pune parola bai";
         } else {
             $hash = password_hash($password, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO users (username, password)
-                    VALUES ('$username', '$hash')";
+            $sql = "INSERT INTO users (username, password, email)
+                    VALUES ('$username', '$hash', '$email')";
             if (mysqli_query($conn, $sql)) {
                 $message = "Utilizator adăugat cu succes";
             } else {
@@ -111,6 +178,10 @@
             <div class="field">
                 <div class="fas fa-lock"></div>
                 <input type="password" name="password_again" placeholder="<?php echo $lang['password-placeholder-2'] ?>">
+            </div>
+            <div class="field">
+                <div class="fas fa-lock"></div>
+                <input type="email" name="email" placeholder="Email">
             </div>
             <button type="submit"><?php echo $lang['signup'] ?></button>
             <div class="link">
