@@ -206,7 +206,6 @@
 }
 
 @media screen and (max-width: 1150px) {
-
     #main
 {
     scale:65%;
@@ -624,7 +623,7 @@ body, html {
 }
 
 .login-form{
-  position: relative;
+  position: fixed;
   width: 370px;
   height: auto;
   background: #1b1b1b;
@@ -633,6 +632,7 @@ body, html {
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: inset 0 0 1px #272727;
+  transform: translate(145%, 10%);
 }
 .text{
   font-size: 30px;

@@ -86,7 +86,7 @@ $message = ""; // Variabila pentru a stoca mesajele de eroare sau de succes
             audio.play();
         });
     </script>
-    <div class="login-form" align=center>
+    <div class="login-form">
         <div class="text">
             <?php echo $lang['login'] ?>
         </div>

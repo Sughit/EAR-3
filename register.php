@@ -16,13 +16,15 @@
         $mail = new PHPMailer(true);
 
         try {
-            $mail->isSMTP();                                            //Send using SMTP
+            $mail->isSMTP(); 
+            $mail->SMTPDebug = 0;
+            $mail->Debugoutput = 'html';                                         
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'ear3.ro@gmail.com';                     //SMTP username
             $mail->Password   = 'EmanuelAndreiRobert333';                               //SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
+            $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
         
             //Recipients
             $mail->setFrom('ear3.ro@gmail.com', 'EAR-3 Market');
@@ -33,13 +35,18 @@
             $mail->Subject = 'Email Verification form';
             $mail->Body    = "Mersi de inregistrare! Da click pentru a verifica emailul <a href='verify.php?email=$email&v_code=$v_code'>Link</a>";
         
-            $mail->send();
-            echo 'Message has been sent';
+            if($mail->send())
+            {
+                echo 'Message has been sent';
+            }
+            else
+            {
+                echo "Eroare la trimitere";
+            }
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
     }
-
     $message = ""; // Variabila pentru a stoca mesajele de eroare sau de succes
 
     // Verifică dacă s-a efectuat o cerere POST
@@ -147,7 +154,7 @@
             audio.play();
         });
     </script>
-    <div class="login-form" align=center>
+    <div class="login-form">
         <div class="text">
             <?php echo $lang['signup'] ?>
         </div>
