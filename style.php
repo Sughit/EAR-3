@@ -715,3 +715,16 @@ button:hover{
 .link a:hover{
   text-decoration: underline;
 }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+  display: grid;
+  place-items: center; /* Aliniere orizontală și verticală */
+}
+
+  }

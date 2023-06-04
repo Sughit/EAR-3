@@ -86,6 +86,7 @@ $message = ""; // Variabila pentru a stoca mesajele de eroare sau de succes
             audio.play();
         });
     </script>
+    <div  class="container" >
     <div class="login-form">
         <div class="text">
             <?php echo $lang['login'] ?>
@@ -105,6 +106,7 @@ $message = ""; // Variabila pentru a stoca mesajele de eroare sau de succes
                 <a href="register.php"><?php echo $lang['signup-now'] ?></a>
             </div>
         </form>
+    </div>
     </div>
     <div class="message"><?php echo $message; ?></div>
 </body>
