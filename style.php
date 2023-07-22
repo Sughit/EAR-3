@@ -29,7 +29,7 @@
     top:0%;
     left:0%;
     opacity:0.6;
-    height: 10%;
+    height: 8%;
 }
 .nav-ul
 {
@@ -541,11 +541,26 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+.parallax2 {
+    
+    background-image: gray;
+    
+    /* MODIFICATI  DE AICI IMAGINEA DE SUS */
+
+height: 30%; 
+
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
 .rounded-corners {
-  border-radius: 0 0 20px 20px;
+  border-radius: 20px 20px 20px 20px;
 }
 .rounded-corners2 {
-  border-radius: 20px 20px  0 0;
+  border-radius: 20px 20px 20px 20px;
 }
 .mainul {
 
@@ -556,6 +571,7 @@ body, html {
       border: 1px solid #383838; 
       border-radius: 5px;
       padding: 10px;
+      color: white;
       font-family: Arial, sans-serif;
     }
 

@@ -98,7 +98,7 @@
 
 <div class="parallax" ></div>
  
-<div style="height:1000px;background-color:#202020;font-size:36px" class='rounded-corners'>
+<div style="height:1000px;background-color:#202020;font-size:36px;  padding-top: 500px" class='rounded-corners'>
 
 
 <font color=gray>
