@@ -19,7 +19,10 @@
 {
     transform: translate(0, 50%);
 }
+.gradient-custom{
 
+    color: red;
+}
 .nav-bar
 {
     background-color: black;

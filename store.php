@@ -80,9 +80,13 @@
             <div class="carousel-inner">
                 <!-- Imaginile pentru carousel -->
                 <div class="carousel-item active">
+
+                <a href="JocMasini.php">
                     <img src="poze/poza_masina.png" class="d-block w-100" alt="Imagine 1">
                 </div>
                 <div class="carousel-item">
+                    
+                <a href="Project2.php">
                     <img src="poze/provizoriu.png" class="d-block w-100" alt="Imagine 2">
                 </div>
                 <div class="carousel-item">
@@ -115,6 +119,8 @@
         <div class="carousel-inner">
             <!-- Imaginile pentru carousel -->
             <div class="carousel-item active">
+                
+            <a href="DungeonScorer.php">
                 <img src="poze/provizoriu.png" class="d-block w-100" alt="Imagine 1">
             </div>
             <div class="carousel-item">

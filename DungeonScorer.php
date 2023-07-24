@@ -61,13 +61,16 @@
   audio.play();
 });
     </script>   
-    <div class="div-textProject1">
-    <p class="text">
-    <?php echo $lang['textProject1'] ?>
     </p>
 </div>
-<pre>
-        <a class="nav-steag1" href="Project1.php?lang=en"><img src="poze/en.png" width=50px ></a>            <a class="nav-steag2" href="Project1.php?lang=ro"><img src="poze/ro.png"width= 50px><a>    
-    </pre>  
+
+<div style="height:800px;background-color:#202020;font-size:36px;align:center" class='rounded-corners'>
+<br>
+<h3 align=center color=white> Dungeon Scorer </h3>
+
+<img src=https://imgur.com/a/0mc5Msw > 
+</div>
+
+    
 </body>
 </html>
