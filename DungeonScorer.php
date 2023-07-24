@@ -68,7 +68,7 @@
 <br>
 <h3 align=center color=white> Dungeon Scorer </h3>
 
-<img src=https://imgur.com/a/0mc5Msw > 
+<img src=htdocs\DungeonScorer.png > 
 </div>
 
     
