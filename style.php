@@ -461,14 +461,6 @@
     color: #c2c2c2;
     margin: 10px;
 }
-.div-textProject1
-{
-    top: 20%;
-    left: 20%;
-    height:50%;
-    position:absolute;
-    z-index: -1;  
-}
 .login {
     align="center"
   width: 50px;
@@ -738,6 +730,14 @@ button:hover{
 .container {
   margin-left: auto;
   margin-right: auto;
+}.center {margin: 0 auto;
+}
+
+.stanga{
+
+    padding-left: 80px;
+    
+    padding-top: 40px;
 }
 
 @media screen and (max-width: 900px) {

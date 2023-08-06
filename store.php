@@ -76,38 +76,12 @@
         <br>
         <div class="mainul" align="center">EAR Games</div>
 
-        <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- Imaginile pentru carousel -->
-                <div class="carousel-item active">
-
-                <a href="JocMasini.php">
-                    <img src="poze/poza_masina.png" class="d-block w-100" alt="Imagine 1">
-                </div>
-                <div class="carousel-item">
+        <a href="https://ibb.co/5x4Zg6K"><img src="https://i.ibb.co/5x4Zg6K/masina.png" alt="masina" border="0"  class=stanga></a>
                     
-                <a href="Project2.php">
-                    <img src="poze/provizoriu.png" class="d-block w-100" alt="Imagine 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="poze/provizoriu.png" class="d-block w-100" alt="Imagine 3">
-                </div>
-                <div class="carousel-item">
-                    <img src="poze/provizoriu.png" class="d-block w-100" alt="Imagine 4">
-                </div>
-                <div class="carousel-item">
-                    <img src="poze/provizoriu.png" class="d-block w-100" alt="Imagine 5">
-                </div>
-            </div>
-            <!-- Săgeți pentru navigarea în carousel -->
-            <a class="carousel-control-prev" href="#carousel1" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel1" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a>
+                
+                   <!-- <img src="https://imgur.com/a/sP7E0s8"  alt="Imagine 2">-->
+             
+            
         </div>
     </div>
 
