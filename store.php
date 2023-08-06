@@ -76,11 +76,10 @@
         <br>
         <div class="mainul" align="center">EAR Games</div>
 
-        <a href="https://ibb.co/5x4Zg6K"><img src="https://i.ibb.co/5x4Zg6K/masina.png" alt="masina" border="0"  class=stanga></a>
+        <a href="JocMasini.php"><img src="https://i.ibb.co/5x4Zg6K/masina.png" alt="masina" border="0"  class=stanga></a>
                     
                 
-                   <!-- <img src="https://imgur.com/a/sP7E0s8"  alt="Imagine 2">-->
-             
+        <a href="CardSiege.php" ><img src="https://i.ibb.co/F7cCjcx/logoNou.png" alt="logoNou" border="0"  class=stanga></a>
             
         </div>
     </div>
